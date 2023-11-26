@@ -28,9 +28,15 @@ function drawExtendedLine(ctx, x1, y1, x2, y2, delta, width, innerColor, outerCo
     ctx.strokeStyle = outerColor
     ctx.stroke()
 
+    const
+        px1 = x1 + (x2 - x1) * -Math.min(0, delta),
+        px2 = x1 + (x2 - x1) * (1 + Math.min(0, delta)),
+        py1 = y1 + (y2 - y1) * -Math.min(0, delta),
+        py2 = y1 + (y2 - y1) * (1 + Math.min(0, delta))
+
     ctx.beginPath()
-    ctx.moveTo(x1, y1)
-    ctx.lineTo(x2, y2)
+    ctx.moveTo(px1, py1)
+    ctx.lineTo(px2, py2)
     ctx.lineWidth = width
     ctx.strokeStyle = innerColor
     ctx.stroke()
