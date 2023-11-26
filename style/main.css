@@ -4,16 +4,20 @@
 body {
     background-color: white;
     font-family: 'Bodoni Moda', serif;
+    width: 100vw;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 10vw 30vw 45vw 15vw;
-    grid-template-rows: 15vh 80vh 5vh;
+    grid-template-rows: 15vh 40vw 10vh 50vh 15vh 15vw;
     background-color: rgb(253 250 243);
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-style: italic;
     font-size: 4vw;
     line-height: 1;
@@ -30,6 +34,26 @@ h1 {
 h2 {
     font-style: normal;
     font-size: 3vw;
+}
+
+h3 {
+    font-size: 2vw;
+    text-transform: lowercase;
+}
+
+h4 {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    font-size: 3vw;
+    font-weight: 400;
+    color: rgb(253 250 243);
+    text-transform: lowercase;
+    font-style: normal;
+}
+
+h4#name {
+    font-style: italic;
+    margin-top: -1vw;
 }
 
 #desc {
@@ -57,6 +81,59 @@ p {
     margin-left: 1vw;
 }
 
-input {
-    border: none;
+.some {
+    grid-row: 4;
+    grid-column: 2;
+
+    display: flex;
+    flex-direction: row;
 }
+
+.some div {
+    margin-right: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.some .line {
+    margin: 0;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.some p {
+    margin: 0;
+    width: 8vw;
+    text-align: center;
+}
+
+.some-canvas {
+    width: 15vw;
+    height: 15vw;
+}
+
+footer {
+    width: 100vw;
+    background: rgb(113, 113, 104);
+    position: relative;
+
+    grid-row: 6;
+    grid-column: 1 / span 4;
+}
+
+footer .line {
+    color: rgb(253 250 243);
+    position: absolute;
+    right: 0;
+    top: 5vh;
+}
+
+footer .line.second {
+    top: 8vh;
+}
+
+#name {}

@@ -9,4 +9,6 @@ canvas {
     background: rgb(113, 113, 104);
     margin: 0 auto;
     display: block;
+
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
