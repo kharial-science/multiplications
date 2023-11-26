@@ -1,4 +1,4 @@
-# Tables de multiplications
+# Tables de multiplication
 
 Une représentation animée des tables de multiplications.
 
